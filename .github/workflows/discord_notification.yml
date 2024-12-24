@@ -2,7 +2,7 @@ name: Discord Notification
 
 on:
   schedule:
-    - cron: "*/2 * * * *"  # Runs every 2 minutes
+    - cron: "47 20 * * *"  # Runs every 2 minutes
   workflow_dispatch:
 
 jobs:
