@@ -2,8 +2,8 @@ name: Discord Notification
 
 on:
   schedule:
-    - cron: "40 20 * * *"  # Runs at 8:40 PM UTC (2:10 AM IST)
-  workflow_dispatch:  # Allows manual trigger for testing
+    - cron: "10 20 * * *"  # Example: Runs at 8:10 PM UTC (2:40 AM IST)
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   send-notification:
