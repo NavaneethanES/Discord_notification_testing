@@ -1,0 +1,25 @@
+name: Discord Notification
+
+on:
+  schedule:
+    - cron: "40 20 * * *"  # Runs at 8:40 PM UTC (2:10 AM IST)
+  workflow_dispatch:  # Allows manual trigger for testing
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run Python Script
+      run: python discord_notification.py
